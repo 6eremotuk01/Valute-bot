@@ -8,7 +8,7 @@ from time import sleep
 VERSION = '1.6.5 Stable'
 
 BOT_TOKEN = '' # Указываете токен для бота
-BIO = 'the_black_cap' # Указываете никнейм администратора
+BIO = '' # Указываете никнейм администратора
 
 URL_BOT = 'https://api.telegram.org/bot%s/' %BOT_TOKEN
 URL_MONEY = 'https://www.cbr-xml-daily.ru/'
@@ -362,6 +362,10 @@ def create_dir(dirrectory):
 
 ###  ГЛАВНАЯ ФУНКЦИЯ ВЫЗОВА БОТА ###
 def main():
+    global MAIN_KEYBOARD
+    global ADMIN_KEYBOARD
+    global COMMAND_KEYBOARD
+
     create_dir('logs')
 
     print ('Бот курса валют. Версия %s \n(с) Черная кепка (The Black Cap), 2018. Все права защищены'%VERSION)
